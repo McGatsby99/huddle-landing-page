@@ -1,0 +1,183 @@
+/* CSS reset */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Variables */
+
+:root{
+  /* Primary colours */
+  --violet: hsl(257, 40%, 49%);
+  --soft-magenta: hsl(300, 69%, 71%);
+
+  font-size: 15px;
+
+}
+
+body{
+  height: 100vh;
+  width: 100vw;
+  font-family: "Open Sans", sans-serif;
+}
+
+h1{
+  font-family: "Poppins", sans-serif;
+}
+
+.wrapper{
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--violet);
+  background-image: url("images/bg-desktop.svg");
+  background-size: cover;
+
+}
+
+.container{
+  min-height: 100%;
+  padding: 5% 7%;
+}
+
+.logo{
+  height: 50px;
+  margin-bottom: 60px;
+}
+
+.logo img{
+  height: 50px;
+}
+
+.content{
+  display: flex;
+  height: 100%;
+}
+
+.left{
+  min-width: 60%;
+}
+
+.left img{
+ height: 60vh;
+ width: 48vw;
+}
+
+.right{
+  color: white;
+}
+
+.right h1{
+  margin: 30px 0;
+}
+
+.right p{
+  font-size: 0.8rem;
+  margin-bottom: 20px;
+}
+
+.right button{
+  width: 150px;
+  height: 50px;
+  color: var(--violet);
+  text-align: center;
+  border-radius: 30px/50%;
+  border: none;
+  box-shadow: 2px 2px 4px 2px rgba(32, 21, 9, 0.466);
+}
+
+.right button:active{
+  color: white;
+  background-color: var(--soft-magenta);
+}
+
+.icons{
+  height: 50px;
+  position: relative;
+}
+
+.container .fab{
+  position: absolute;
+  font-size: 15px;
+  padding-top: 7px ;
+  text-align: center;
+  bottom: 0px;
+  right: 110px;
+  background-color: var(--violet);
+  color: white;
+  border: white solid 1px;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+}
+
+.wrapper .fa-twitter{
+  position: absolute;
+  bottom: 0px;
+  right: 70px;
+
+}
+
+.wrapper .fa-instagram{
+  position: absolute;
+  bottom: 0px;
+  right: 30px;
+}
+
+
+.attribution { 
+  font-size: 11px; 
+  text-align: center; 
+}
+.attribution a { 
+  color: red;
+}
+
+@media  screen and (max-width: 800px) {
+
+  body{
+    height: 950px;
+  }
+  
+  .wrapper{
+    height: 100%;
+    background-image: url(images/bg-mobile.svg);
+  }
+
+  .logo{
+    text-align: left;
+  }
+
+  .container{
+    text-align: center;
+  }
+
+  .content{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left img{
+    width: 80vw;
+    height: 40vh;
+  }
+
+  .right{
+    text-align: center;
+    min-height: 40vh;
+  }
+
+  .icons{
+    position: unset;
+  }
+
+  .container .fab{
+    position: unset;
+  }
+
+  .wrapper .fa-twitter{
+    margin: 0 10px;
+  }
+
+ 
+}
